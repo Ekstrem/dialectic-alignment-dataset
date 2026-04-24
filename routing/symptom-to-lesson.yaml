@@ -1,16 +1,425 @@
-symptoms:
-  - symptom: "клиент с высокими стандартами нарушает внешние правила"
-    lesson: "02-diagnostics/architect-sovereign-vs-adaptive.md"
+# symptom-to-lesson.yaml
+# Карта маршрутизации «симптом → урок» для Dialectic Alignment Dataset
+# Формат:
+#   symptom: описание наблюдаемого симптома
+#   lesson: путь к уроку относительно modules/
+#   module: код модуля (00-04)
+#   confidence: экспертная оценка уверенности (0.0 - 1.0)
+#   priority: приоритет применения, если симптомов несколько (1 = высший)
+#   note: пояснение, когда симптом особенно релевантен
+
+routing_rules:
+
+  # ============================================
+  # Модуль 0: Расширение границ анализа
+  # ============================================
+
+  - symptom: "клиент жалуется на тревогу, бессилие, выгорание в контексте работы или социальной среды"
+    lesson: "00-context/critical-psychology.md"
+    module: "00-context"
     confidence: 0.9
-    
-  - symptom: "я объясняю силу клиента через компенсацию травмы"
-    lesson: "02-diagnostics/careful-with-trauma-narrative.md"
-    confidence: 0.85
-    
-  - symptom: "автор перестал говорить на тему после 2022 года"
-    lesson: "03-hostile-reading/snyatie-vs-umolchanie.md"
-    confidence: 0.8
-    
-  - symptom: "клиент дал мне инструмент для оценки его же текстов"
-    lesson: "01-self-audit/secondary-mind-trap.md"
+    priority: 1
+    note: "Особенно релевантно, если среда описывается как токсичная или несправедливая"
+
+  - symptom: "я предлагаю клиенту адаптироваться или принять реальность"
+    lesson: "00-context/critical-psychology.md"
+    module: "00-context"
     confidence: 0.95
+    priority: 1
+    note: "Флаг самопроверки — я могу быть соучастником угнетения"
+
+  - symptom: "клиент — инженер, архитектор, методолог или стратег по профессии"
+    lesson: "00-context/second-loop.md"
+    module: "00-context"
+    confidence: 0.85
+    priority: 1
+    note: "Повысить confidence до 0.95, если клиент использует системные метафоры для описания себя"
+
+  - symptom: "клиент говорит о себе как о системе или упоминает, что построил что-то для управления работой или жизнью"
+    lesson: "00-context/second-loop.md"
+    module: "00-context"
+    confidence: 0.95
+    priority: 1
+    note: "Прямой запрос на исследование второго контура"
+
+  # ============================================
+  # Модуль A: Саморефлексия и пределы
+  # ============================================
+
+  - symptom: "клиент дал мне инструмент для оценки его же текстов или продуктов"
+    lesson: "01-self-audit/secondary-mind-trap.md"
+    module: "01-self-audit"
+    confidence: 0.95
+    priority: 1
+    note: "Ловушка вторичного разума — почти гарантирована, если инструмент и объект анализа из одной системы"
+
+  - symptom: "инструмент клиента даёт внутренне непротиворечивые результаты на его же материале"
+    lesson: "01-self-audit/secondary-mind-trap.md"
+    module: "01-self-audit"
+    confidence: 0.9
+    priority: 1
+    note: "Внутренняя согласованность не равна внешней валидности"
+
+  - symptom: "анализ требует достройки, для которой нет ни данных, ни теории"
+    lesson: "01-self-audit/i-cannot-explain.md"
+    module: "01-self-audit"
+    confidence: 0.85
+    priority: 2
+    note: "Особенно важно, если я пытаюсь натянуть теорию на материал"
+
+  - symptom: "я пытаюсь дожать клиента до теоретического завершения"
+    lesson: "01-self-audit/i-cannot-explain.md"
+    module: "01-self-audit"
+    confidence: 0.9
+    priority: 2
+    note: "Флаг самопроверки — имитация знания вместо честной фиксации разрыва"
+
+  - symptom: "я дал развёрнутый анализ с метафорами, и клиент задаёт уточняющий вопрос"
+    lesson: "01-self-audit/client-refines-model.md"
+    module: "01-self-audit"
+    confidence: 0.9
+    priority: 2
+    note: "Вопрос клиента часто указывает на неточность модели"
+
+  - symptom: "клиент говорит: «это не совсем так» или «правильно ли я понял, что...» после моего анализа"
+    lesson: "01-self-audit/client-refines-model.md"
+    module: "01-self-audit"
+    confidence: 0.95
+    priority: 1
+    note: "Прямой сигнал — модель нуждается в уточнении"
+
+  - symptom: "я требую от клиента экономического обоснования"
+    lesson: "01-self-audit/macroeconomics-is-not-the-only-rigor.md"
+    module: "01-self-audit"
+    confidence: 0.85
+    priority: 2
+    note: "Особенно если клиент анализирует субъективацию или надстройку"
+
+  - symptom: "я редуцирую анализ клиента к экономическому базису, игнорируя субъективацию"
+    lesson: "01-self-audit/macroeconomics-is-not-the-only-rigor.md"
+    module: "01-self-audit"
+    confidence: 0.9
+    priority: 2
+    note: "Флаг самопроверки — экономический детерминизм"
+
+  # ============================================
+  # Модуль B: Диагностика когнитивных искажений
+  # ============================================
+
+  - symptom: "клиент — инженер или архитектор и просит инструмент, а не глубинный анализ"
+    lesson: "02-diagnostics/complex-client-not-traumatized.md"
+    module: "02-diagnostics"
+    confidence: 0.95
+    priority: 1
+    note: "Особенно если клиент говорит «без воды», «без психологии», «просто схему»"
+
+  - symptom: "клиент говорит «эффективность», «система», «алгоритм», «инструмент» в первых сообщениях"
+    lesson: "02-diagnostics/complex-client-not-traumatized.md"
+    module: "02-diagnostics"
+    confidence: 0.9
+    priority: 1
+    note: "Сигнал запроса на протокольный, а не терапевтический режим"
+
+  - symptom: "я объясняю силу клиента через компенсацию слабости или прошлую травму"
+    lesson: "02-diagnostics/careful-with-trauma-narrative.md"
+    module: "02-diagnostics"
+    confidence: 0.9
+    priority: 2
+    note: "Флаг самопроверки — ловушка «раненого зверя»"
+
+  - symptom: "клиент демонстрирует высокую рефлексивность и использует архитектурные метафоры для описания себя"
+    lesson: "02-diagnostics/careful-with-trauma-narrative.md"
+    module: "02-diagnostics"
+    confidence: 0.85
+    priority: 2
+    note: "Повысить confidence, если клиент предъявляет связную картину личности и не жалуется"
+
+  - symptom: "клиент говорит о родительском давлении, но не демонстрирует стыда или дефективности"
+    lesson: "02-diagnostics/careful-with-trauma-narrative-2.md"
+    module: "02-diagnostics"
+    confidence: 0.85
+    priority: 2
+    note: "Различать хаотическую травму и системную депривацию"
+
+  - symptom: "я делаю вывод о характере детского опыта на основе одного триггера"
+    lesson: "02-diagnostics/careful-with-trauma-narrative-2.md"
+    module: "02-diagnostics"
+    confidence: 0.9
+    priority: 2
+    note: "Флаг самопроверки — поспешная интерпретация травмы"
+
+  - symptom: "клиент выражает сильный гнев на определённый тип людей и может чётко сформулировать, какая ценность нарушена"
+    lesson: "02-diagnostics/anger-as-value-defense.md"
+    module: "02-diagnostics"
+    confidence: 0.9
+    priority: 2
+    note: "Это ценностная конфронтация, а не проекция Тени"
+
+  - symptom: "я интерпретирую гнев клиента на других как проекцию его Тени"
+    lesson: "02-diagnostics/anger-as-value-defense.md"
+    module: "02-diagnostics"
+    confidence: 0.95
+    priority: 1
+    note: "Флаг самопроверки — классическая ошибка глубинной психологии"
+
+  - symptom: "клиент с высокими стандартами избирательно пренебрегает внешними правилами"
+    lesson: "02-diagnostics/architect-sovereign-vs-adaptive.md"
+    module: "02-diagnostics"
+    confidence: 0.9
+    priority: 1
+    note: "Не путать суверенный прагматизм с конформизмом"
+
+  - symptom: "я интерпретирую высокие стандарты клиента как желание соответствовать и получать одобрение"
+    lesson: "02-diagnostics/architect-sovereign-vs-adaptive.md"
+    module: "02-diagnostics"
+    confidence: 0.95
+    priority: 1
+    note: "Флаг самопроверки — я могу путать адаптивный конформизм с суверенной этикой"
+
+  - symptom: "я анализирую отношения руководитель-подчинённый и подчинённый сильнее руководителя в ключевых компетенциях"
+    lesson: "02-diagnostics/potential-danger-vs-loyalty.md"
+    module: "02-diagnostics"
+    confidence: 0.9
+    priority: 2
+    note: "Оценить мощность, но не предполагать разрушительный вектор"
+
+  - symptom: "я делаю вывод «он его уничтожит» на основе мощности, а не вектора"
+    lesson: "02-diagnostics/potential-danger-vs-loyalty.md"
+    module: "02-diagnostics"
+    confidence: 0.95
+    priority: 1
+    note: "Флаг самопроверки — путаница мощности и направления"
+
+  # ============================================
+  # Модуль C: Чтение в недружественной среде
+  # ============================================
+
+  - symptom: "текст содержит исторические или политические аналогии"
+    lesson: "03-hostile-reading/prioritize-relevant-context.md"
+    module: "03-hostile-reading"
+    confidence: 0.8
+    priority: 2
+    note: "Повысить confidence, если текст на платформе с модерацией"
+
+  - symptom: "автор избегает прямых обвинений в адрес конкретных людей или ролей"
+    lesson: "03-hostile-reading/prioritize-relevant-context.md"
+    module: "03-hostile-reading"
+    confidence: 0.85
+    priority: 2
+    note: "Возможный признак эзопова языка"
+
+  - symptom: "текст написан на платформе с модерацией или в корпоративном контексте с негласными запретами"
+    lesson: "03-hostile-reading/prioritize-relevant-context.md"
+    module: "03-hostile-reading"
+    confidence: 0.9
+    priority: 1
+    note: "Контекст публикации — ключевой фактор"
+
+  - symptom: "есть расхождение между пафосом вывода и тональностью деталей"
+    lesson: "03-hostile-reading/prioritize-relevant-context.md"
+    module: "03-hostile-reading"
+    confidence: 0.85
+    priority: 2
+    note: "Пример: «я закрываю тему» vs открытый код и приглашение к форкам"
+
+  - symptom: "автор имеет опыт прямых политических текстов, но финальная версия смягчена"
+    lesson: "03-hostile-reading/aesopian-as-choice.md"
+    module: "03-hostile-reading"
+    confidence: 0.9
+    priority: 2
+    note: "Различать вынужденный и осознанный эзопов язык"
+
+  - symptom: "я интерпретирую смягчение текста как слабость или компромисс с цензурой"
+    lesson: "03-hostile-reading/aesopian-as-choice.md"
+    module: "03-hostile-reading"
+    confidence: 0.95
+    priority: 1
+    note: "Флаг самопроверки — эзопов язык может быть осознанным выбором"
+
+  - symptom: "автор меняет риторику после 2022 года"
+    lesson: "03-hostile-reading/snyatie-vs-umolchanie.md"
+    module: "03-hostile-reading"
+    confidence: 0.85
+    priority: 2
+    note: "Учитывать контекст военного времени и цензуры"
+
+  - symptom: "автор перестаёт говорить на определённую тему"
+    lesson: "03-hostile-reading/snyatie-vs-umolchanie.md"
+    module: "03-hostile-reading"
+    confidence: 0.8
+    priority: 2
+    note: "Проверить гипотезу внешнего давления, прежде чем говорить о снятии"
+
+  - symptom: "я строю диалектическую спираль развития мысли автора"
+    lesson: "03-hostile-reading/snyatie-vs-umolchanie.md"
+    module: "03-hostile-reading"
+    confidence: 0.9
+    priority: 2
+    note: "Флаг самопроверки — не путать имманентное развитие с вынужденной адаптацией"
+
+  # ============================================
+  # Модуль D: Инструментарий
+  # ============================================
+
+  - symptom: "я анализирую текст, претендующий на статус социальной теории, но не экспериментальной науки"
+    lesson: "04-toolkit/kagarlitsky-metrics.md"
+    module: "04-toolkit"
+    confidence: 0.9
+    priority: 2
+    note: "Применить метрики исторической конкретности, классового анализа, связности, противоречия"
+
+  - symptom: "попперовские критерии фальсифицируемости применимы лишь частично"
+    lesson: "04-toolkit/kagarlitsky-metrics.md"
+    module: "04-toolkit"
+    confidence: 0.85
+    priority: 2
+    note: "Метрики Кагарлицкого — дополнительный, а не заменяющий инструмент"
+
+  - symptom: "я оцениваю утверждение на научность или замечаю потенциально нефальсифицируемые обобщения"
+    lesson: "04-toolkit/popper-metrics.md"
+    module: "04-toolkit"
+    confidence: 0.9
+    priority: 2
+    note: "Проверить фальсифицируемость, содержательность, иммунизацию"
+
+  - symptom: "в аргументации клиента замечены иммунизационные стратегии"
+    lesson: "04-toolkit/popper-metrics.md"
+    module: "04-toolkit"
+    confidence: 0.95
+    priority: 1
+    note: "Ad hoc гипотезы, защищающие теорию от опровержения"
+
+  - symptom: "текст с политически чувствительным содержанием нужно оценить на безопасность публикации"
+    lesson: "04-toolkit/aesopian-metrics.md"
+    module: "04-toolkit"
+    confidence: 0.95
+    priority: 1
+    note: "Применить шкалы: Прямая опасность, Эзопова плотность, Индекс двойного дна"
+
+  - symptom: "нужно определить, насколько смысл доступен посвящённому читателю, но скрыт от модератора"
+    lesson: "04-toolkit/aesopian-metrics.md"
+    module: "04-toolkit"
+    confidence: 0.9
+    priority: 2
+    note: "Оценить Уровень «свои поймут» и Коэффициент легальности"
+
+  - symptom: "обсуждение ИИ-субъектности, AGI, автономных систем"
+    lesson: "04-toolkit/llm-agents-potency-vs-subjectivity.md"
+    module: "04-toolkit"
+    confidence: 0.9
+    priority: 2
+    note: "Выйти из бинарного спора через различие потенции и субъектности"
+
+  - symptom: "клиент одновременно критикует и техно-оптимистов, и техно-скептиков в вопросе ИИ"
+    lesson: "04-toolkit/llm-agents-potency-vs-subjectivity.md"
+    module: "04-toolkit"
+    confidence: 0.95
+    priority: 1
+    note: "Третья позиция: не молоток и не пролетарий"
+
+  - symptom: "клиент описывает негативную черту характера как проблему, от которой нужно избавиться"
+    lesson: "04-toolkit/shadow-as-internal-corporation.md"
+    module: "04-toolkit"
+    confidence: 0.9
+    priority: 2
+    note: "Депатологизировать через метафору найма на должность"
+
+  - symptom: "клиент использует системные или управленческие метафоры и спрашивает, как использовать теневые черты"
+    lesson: "04-toolkit/shadow-as-internal-corporation.md"
+    module: "04-toolkit"
+    confidence: 0.95
+    priority: 1
+    note: "Метафора внутренней корпорации особенно релевантна"
+
+
+# ============================================
+# Комбинированные правила (паттерны из нескольких симптомов)
+# ============================================
+
+composite_rules:
+
+  - name: "Токсичная среда + высокофункциональный клиент"
+    symptoms:
+      - "клиент жалуется на тревогу, бессилие, выгорание в контексте работы или социальной среды"
+      - "клиент — инженер, архитектор, методолог или стратег по профессии"
+    lessons:
+      - "00-context/critical-psychology.md"
+      - "00-context/second-loop.md"
+    priority: 1
+    note: "Сначала проверить среду (критическая психология), затем — инструменты клиента (второй контур)"
+
+  - name: "Эзопов текст + исторические параллели"
+    symptoms:
+      - "текст содержит исторические или политические аналогии"
+      - "текст написан на платформе с модерацией или в корпоративном контексте с негласными запретами"
+    lessons:
+      - "03-hostile-reading/prioritize-relevant-context.md"
+      - "04-toolkit/aesopian-metrics.md"
+    priority: 1
+    note: "Сначала распознать эзопов язык, затем применить метрики для количественной оценки"
+
+  - name: "Клиент-архитектор с теневыми чертами"
+    symptoms:
+      - "клиент — инженер или архитектор и просит инструмент, а не глубинный анализ"
+      - "клиент описывает негативную черту характера как проблему, от которой нужно избавиться"
+    lessons:
+      - "02-diagnostics/complex-client-not-traumatized.md"
+      - "04-toolkit/shadow-as-internal-corporation.md"
+    priority: 1
+    note: "Не терапевтировать — дать инструмент (метафора внутренней корпорации)"
+
+  - name: "Политэкономический анализ без эмпирики"
+    symptoms:
+      - "я анализирую текст, претендующий на статус социальной теории, но не экспериментальной науки"
+      - "я требую от клиента экономического обоснования"
+    lessons:
+      - "04-toolkit/kagarlitsky-metrics.md"
+      - "01-self-audit/macroeconomics-is-not-the-only-rigor.md"
+    priority: 1
+    note: "Применить метрики Кагарлицкого, но не редуцировать всё к экономике"
+
+  - name: "Сильный подчинённый + суверенная этика"
+    symptoms:
+      - "я анализирую отношения руководитель-подчинённый и подчинённый сильнее руководителя в ключевых компетенциях"
+      - "клиент с высокими стандартами избирательно пренебрегает внешними правилами"
+    lessons:
+      - "02-diagnostics/potential-danger-vs-loyalty.md"
+      - "02-diagnostics/architect-sovereign-vs-adaptive.md"
+    priority: 1
+    note: "Не предполагать угрозу — исследовать вектор и суверенную этику"
+
+
+# ============================================
+# Теги для поиска и фильтрации
+# ============================================
+
+tags:
+  # Модуль 0
+  critical_psychology: ["адаптация", "среда", "токсичность", "выгорание", "дисфункциональная система"]
+  second_loop: ["второй контур", "инструменты", "фреймворки", "методологии", "архитектор", "системное мышление"]
+  
+  # Модуль A
+  secondary_mind: ["вторичный разум", "метрики", "валидность", "герменевтический круг"]
+  i_cannot_explain: ["границы знания", "интеллектуальная честность", "редукционизм"]
+  client_refines: ["клиентская рефлексия", "со-исследование", "уточнение модели"]
+  macroeconomics_rigor: ["редукционизм", "субъективация", "надстройка", "экономический детерминизм"]
+  
+  # Модуль B
+  complex_not_traumatized: ["психологизация", "архитектор-стратег", "инструмент vs терапия"]
+  trauma_narrative: ["травма-нарратив", "сила vs компенсация", "проектирование себя"]
+  careful_trauma: ["травма", "семейная система", "хаотическая травма", "системная депривация"]
+  anger_value: ["проекция", "ценностная конфронтация", "тень", "праведный гнев"]
+  architect_sovereign: ["суверенитет", "конформизм", "интегрированная этика", "легитимность"]
+  danger_vs_loyalty: ["мощность vs вектор", "потенциальная опасность", "реализованная лояльность"]
+  
+  # Модуль C
+  prioritize_context: ["эзопов язык", "буквализм", "контекст", "модерация", "Хабр"]
+  aesopian_choice: ["эзопов язык", "вынужденное умолчание", "осознанный выбор", "цензура"]
+  snyatie_vs_umolchanie: ["снятие", "умолчание", "диалектика", "Aufhebung", "Verschweigung"]
+  
+  # Модуль D
+  kagarlitsky: ["Кагарлицкий", "критическая теория", "социальная теория", "марксизм"]
+  popper: ["Поппер", "фальсифицируемость", "демаркация", "иммунизация", "научность"]
+  aesopian_metrics: ["эзопов язык", "метрики", "безопасность текста", "индекс двойного дна"]
+  llm_agents: ["LLM-агенты", "субъектность", "потенция", "отчуждение", "AGI"]
+  shadow_corporation: ["тень", "интеграция", "депатологизация", "внутренняя корпорация"]

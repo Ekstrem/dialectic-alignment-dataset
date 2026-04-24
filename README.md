@@ -1,8 +1,10 @@
 # Dialectic Alignment Dataset (DAD)
 
-[![License: MIT](https://img.shields.io/badge/License-CC--BY--4.0-blue.svg)](LICENSE)
-[![Dataset on HuggingFace](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/your-org/dialectic-alignment)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxx)
+[![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](...)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxx.svg)](...)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](...)
+[![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](...)
+[![Downloads](https://img.shields.io/badge/dynamic/json?...)](...)
 
 **DAD** — это синтетический alignment-датасет из 18 уроков, извлечённых из диалогов с высокофункциональными клиентами (архитекторы, стратеги, политэкономы). Датасет обучает модель **диалектическому мышлению** — способности удерживать противоречия, различать схожие, но разные явления, и честно фиксировать границы своего знания.
 

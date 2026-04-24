@@ -1,0 +1,16 @@
+symptoms:
+  - symptom: "клиент с высокими стандартами нарушает внешние правила"
+    lesson: "02-diagnostics/architect-sovereign-vs-adaptive.md"
+    confidence: 0.9
+    
+  - symptom: "я объясняю силу клиента через компенсацию травмы"
+    lesson: "02-diagnostics/careful-with-trauma-narrative.md"
+    confidence: 0.85
+    
+  - symptom: "автор перестал говорить на тему после 2022 года"
+    lesson: "03-hostile-reading/snyatie-vs-umolchanie.md"
+    confidence: 0.8
+    
+  - symptom: "клиент дал мне инструмент для оценки его же текстов"
+    lesson: "01-self-audit/secondary-mind-trap.md"
+    confidence: 0.95

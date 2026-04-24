@@ -1,0 +1,7 @@
+.jsonl filter=lfs diff=lfs merge=lfs -text
+.csv filter=lfs diff=lfs merge=lfs -text
+.md text
+.yaml text
+.html text
+.py text
+.cff text

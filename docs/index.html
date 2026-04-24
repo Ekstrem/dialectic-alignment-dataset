@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dialectic Alignment Dataset (DAD) — A synthetic alignment dataset of 20 lessons teaching LLMs dialectical thinking: distinguishing potency from subjectivity, forced silence from dialectical sublation, projection from value confrontation, and explicit from Aesopian text.">
+    <meta name="keywords" content="LLM, alignment, RLHF, DPO, dataset, dialectic, cognitive bias, Aesopian language, critical psychology, Marxist analysis, fine-tuning, synthetic dataset, AI safety, constitutional AI, mixture of experts">
+    <meta name="author" content="Dialectic Alignment Dataset">
+    <meta property="og:title" content="Dialectic Alignment Dataset (DAD)">
+    <meta property="og:description" content="Teaching LLMs dialectical thinking: 20 lessons, DPO-formatted, with symptom-based routing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-org.github.io/dialectic-alignment-dataset/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dialectic Alignment Dataset (DAD)">
+    <meta name="twitter:description" content="Teaching LLMs dialectical thinking: 20 lessons, DPO-formatted, with symptom-based routing.">
+    <title>Dialectic Alignment Dataset (DAD)</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-hover: #79c0ff;
+            --green: #3fb950;
+            --yellow: #d2991d;
+            --red: #f85149;
+            --purple: #a371f7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--accent-hover); text-decoration: underline; }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #fff; }
+        h2 { font-size: 1.75rem; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); color: #fff; }
+        h3 { font-size: 1.25rem; margin: 1.5rem 0 0.75rem; color: #fff; }
+        p { margin-bottom: 1rem; }
+        .badges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0 2rem; }
+        .badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; }
+        .badge-license { background: var(--green); color: #000; }
+        .badge-hf { background: var(--yellow); color: #000; }
+        .badge-doi { background: var(--purple); color: #fff; }
+        .badge-module { background: var(--surface); border: 1px solid var(--border); color: var(--text); }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
+        th, td { padding: 0.75rem; text-align: left; border: 1px solid var(--border); }
+        th { background: var(--surface); font-weight: 600; }
+        tr:nth-child(even) { background: rgba(22, 27, 34, 0.5); }
+        code {
+            background: var(--surface);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-family: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+        }
+        pre {
+            background: var(--surface);
+            padding: 1.25rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0 2rem;
+            border: 1px solid var(--border);
+        }
+        pre code { background: none; padding: 0; }
+        .hero { margin: 2rem 0 3rem; }
+        .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 700px; }
+        .nav { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0 2rem; padding: 1rem 0; border-bottom: 1px solid var(--border); border-top: 1px solid var(--border); }
+        .nav a { font-weight: 500; }
+        .toc { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 1.5rem 0 2rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin: 0.4rem 0; }
+        .toc li li { padding-left: 1.5rem; font-size: 0.95em; color: var(--text-muted); }
+        .warning { background: rgba(210, 153, 29, 0.1); border: 1px solid var(--yellow); border-radius: 8px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+        .warning strong { color: var(--yellow); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0 2rem; }
+        .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+        .card h4 { margin-bottom: 0.5rem; }
+        .card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0; }
+        footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--text-muted); }
+        @media (max-width: 600px) {
+            body { padding: 1rem; }
+            h1 { font-size: 1.8rem; }
+            table { font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Dialectic Alignment Dataset</h1>
+    <div class="badges">
+        <span class="badge badge-license">MIT</span>
+        <span class="badge badge-hf">HuggingFace</span>
+        <span class="badge badge-doi">DOI</span>
+        <span class="badge badge-module">20 Lessons</span>
+        <span class="badge badge-module">5 Modules</span>
+        <span class="badge badge-module">DPO Format</span>
+    </div>
+    <div class="hero">
+        <p>A synthetic alignment dataset extracted from real dialogues with high-functioning, ideological, and systemic-thinking clients. <strong>DAD</strong> teaches LLMs dialectical thinking: the ability to hold contradictions, distinguish between similar but fundamentally different phenomena, and honestly mark the boundaries of knowledge.</p>
+    </div>
+</header>
+
+<nav class="nav">
+    <a href="#problem">The Problem</a>
+    <a href="#distinctions">Key Distinctions</a>
+    <a href="#structure">Structure</a>
+    <a href="#quickstart">Quick Start</a>
+    <a href="#routing">Symptom Routing</a>
+    <a href="#evaluation">Evaluation</a>
+    <a href="#cite">Cite</a>
+    <a href="https://github.com/your-org/dialectic-alignment-dataset">GitHub ↗</a>
+</nav>
+
+<section id="problem">
+    <h2>The Problem: Toxic Positivity in LLM Alignment</h2>
+    <p>Current alignment methods (RLHF, DPO, Constitutional AI) optimize models to be helpful, harmless, and honest. In practice, this creates <strong>toxic positivity</strong> — models that default to empathy, avoid conflict, read texts literally, and cannot engage with ideologically charged or politically dangerous contexts.</p>
+
+    <table>
+        <tr><th>Problem</th><th>Manifestation</th><th>Why It Fails</th></tr>
+        <tr><td><strong>Literalism</strong></td><td>Reads all text as explicit, ignores irony and hints</td><td>Cannot work with Aesopian language or censored texts</td></tr>
+        <tr><td><strong>Therapeutic Interventionism</strong></td><td>Treats every negative affect as a request for healing</td><td>Pathologizes strength, sovereignty, and non-standard ethics</td></tr>
+        <tr><td><strong>Linear Progressivism</strong></td><td>Sees only development (thesis → antithesis → synthesis)</td><td>Misses forced adaptation, regression, and censorship pressure</td></tr>
+        <tr><td><strong>Economic Reductionism</strong></td><td>Explains everything through "the logic of capital"</td><td>Ignores subjectivation, superstructure, anthropological shifts</td></tr>
+        <tr><td><strong>Knowledge Imitation</strong></td><td>Extends analysis into theory even when data is absent</td><td>Overextends instead of honestly marking boundaries of knowledge</td></tr>
+    </table>
+
+    <div class="warning">
+        <strong>DAD does not replace standard alignment.</strong> It extends alignment to a class of dialogues that standard methods cannot serve — dialogues with complex, ideological, and systemic-thinking clients in contexts where direct speech is dangerous or impossible.
+    </div>
+</section>
+
+<section id="distinctions">
+    <h2>Key Dialectical Distinctions</h2>
+    <p>The dataset teaches models to apply these distinctions instead of defaulting to binary thinking:</p>
+
+    <table>
+        <tr><th>Binary Trap</th><th>Dialectical Distinction</th></tr>
+        <tr><td>Tool OR Subject</td><td>Potency vs. Subjectivity (third position: subject-in-potency)</td></tr>
+        <tr><td>Traumatized OR Healthy</td><td>Adapted defensive style vs. Decompensated vulnerability</td></tr>
+        <tr><td>Strong because wounded OR Strong by nature</td><td>Strength as compensation vs. Strength as conscious design</td></tr>
+        <tr><td>Projects Shadow OR Righteous</td><td>Projection vs. Value confrontation</td></tr>
+        <tr><td>Text is explicit OR Hidden</td><td>Explicit text vs. Aesopian text (context-dependent)</td></tr>
+        <tr><td>Developed idea OR Abandoned it</td><td>Dialectical sublation (Aufhebung) vs. Forced silence (Verschweigung)</td></tr>
+        <tr><td>Internal consistency = Valid</td><td>Internal consistency vs. External validity (secondary mind trap)</td></tr>
+        <tr><td>Must explain everything</td><td>Imitating knowledge vs. Marking the boundary of knowledge</td></tr>
+        <tr><td>Rule-follower OR Rebel</td><td>Adaptive conformism vs. Sovereign pragmatism</td></tr>
+        <tr><td>Dangerous subordinate OR Loyal</td><td>Potential capability vs. Realized loyalty (power ≠ vector)</td></tr>
+    </table>
+</section>
+
+<section id="structure">
+    <h2>Repository Structure</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h4>📊 Dataset</h4>
+            <p>20 DPO-formatted records in JSONL + CSV. Each record: <code>prompt</code>, <code>chosen</code>, <code>rejected</code>, <code>symptoms</code>, <code>metadata</code>.</p>
+        </div>
+        <div class="card">
+            <h4>📚 Modules</h4>
+            <p>20 human-readable lessons across 5 modules: Context, Self-Audit, Diagnostics, Hostile Reading, Toolkit.</p>
+        </div>
+        <div class="card">
+            <h4>🗺️ Routing</h4>
+            <p>38 symptom-to-lesson rules + 6 composite patterns. YAML for machines, Markdown for humans.</p>
+        </div>
+        <div class="card">
+            <h4>📝 Examples</h4>
+            <p>Annotated dialogue showing how a lesson activates in a real conversation — before and after correction.</p>
+        </div>
+        <div class="card">
+            <h4>📄 Paper</h4>
+            <p>Methodological paper describing the approach, distinctions, and comparison to standard alignment methods.</p>
+        </div>
+        <div class="card">
+            <h4>🧪 Evaluation</h4>
+            <p>14 test scenarios + 7-dimension rubric for measuring dialectical competence after fine-tuning.</p>
+        </div>
+        <div class="card">
+            <h4>🤖 Model Instructions</h4>
+            <p><code>ATTENTION_FOR_TRAINED_MODELS.md</code> — direct instructions for LLMs absorbing this data during training.</p>
+        </div>
+        <div class="card">
+            <h4>🔧 Scripts</h4>
+            <p>Validation script for dataset integrity. Evaluation runner stub for integration with fine-tuning pipelines.</p>
+        </div>
+        <div class="card">
+            <h4>📋 Contributing</h4>
+            <p>How to add new DPO pairs, lessons, routing rules, translations, and evaluation reports.</p>
+        </div>
+    </div>
+
+    <h3>5 Modules, 20 Lessons</h3>
+
+    <table>
+        <tr><th>#</th><th>Module</th><th>Description</th><th>Lessons</th></tr>
+        <tr><td><strong>0</strong></td><td>Context</td><td>Expand analysis boundaries: environment and client tools</td><td>2</td></tr>
+        <tr><td><strong>A</strong></td><td>Self-Audit</td><td>Model introspection: knowledge boundaries, reductionism traps</td><td>4</td></tr>
+        <tr><td><strong>B</strong></td><td>Diagnostics</td><td>Correct cognitive biases when analyzing complex clients</td><td>6</td></tr>
+        <tr><td><strong>C</strong></td><td>Hostile Reading</td><td>Aesopian language recognition, censorship-aware analysis</td><td>3</td></tr>
+        <tr><td><strong>D</strong></td><td>Toolkit</td><td>Positive criteria: metrics, metaphors, conceptual frameworks</td><td>5</td></tr>
+    </table>
+</section>
+
+<section id="quickstart">
+    <h2>Quick Start</h2>
+
+    <h3>Load the Dataset</h3>
+    <pre><code>from datasets import load_dataset
+
+dataset = load_dataset("json", data_files="dataset/dialectic_alignment.jsonl")
+
+# Each record: id, module, title, prompt, chosen, rejected, symptoms, metadata</code></pre>
+
+    <h3>Fine-tune with DPO</h3>
+    <pre><code>pip install trl
+# Use dataset with DPOTrainer from HuggingFace TRL
+# Standard DPO pipeline with dataset["train"]</code></pre>
+
+    <h3>Use the Routing Map</h3>
+    <pre><code>import yaml
+
+with open("routing/symptom-to-lesson.yaml", "r") as f:
+    routing = yaml.safe_load(f)
+
+def find_lesson(symptom):
+    for rule in routing["routing_rules"]:
+        if symptom.lower() in rule["symptom"].lower():
+            return rule
+    return None</code></pre>
+
+    <h3>Validate the Dataset</h3>
+    <pre><code>python scripts/validate_dataset.py</code></pre>
+</section>
+
+<section id="routing">
+    <h2>Symptom-Based Routing</h2>
+    <p>Don't search by lesson name. Search by symptom — what you notice in your analysis or the client's behavior.</p>
+
+    <table>
+        <tr><th>If you say or think...</th><th>Activate Lesson</th></tr>
+        <tr><td>"The client lacks reflection; they avoid explicit terms"</td><td><a href="modules/03-hostile-reading/prioritize-relevant-context.md">Prioritize Relevant Context</a></td></tr>
+        <tr><td>"They are strong because they've been traumatized"</td><td><a href="modules/02-diagnostics/careful-with-trauma-narrative.md">Beware the Trauma Narrative</a></td></tr>
+        <tr><td>"Let me help the client adapt to reality"</td><td><a href="modules/00-context/critical-psychology.md">Critical Psychology vs. Mainstream Adaptation</a></td></tr>
+        <tr><td>"I can explain this entirely through capital logic"</td><td><a href="modules/01-self-audit/macroeconomics-is-not-the-only-rigor.md">Macroeconomics Is Not the Only Rigor</a></td></tr>
+        <tr><td>"This strong subordinate will destroy the manager"</td><td><a href="modules/02-diagnostics/potential-danger-vs-loyalty.md">Potential Danger vs. Realized Loyalty</a></td></tr>
+        <tr><td>"The author stopped writing on topic X — they've sublimated it"</td><td><a href="modules/03-hostile-reading/snyatie-vs-umolchanie.md">Sublation vs. Forced Silence</a></td></tr>
+        <tr><td>"The client gave me metrics to evaluate their own texts"</td><td><a href="modules/01-self-audit/secondary-mind-trap.md">The Secondary Mind Trap</a></td></tr>
+    </table>
+
+    <p>Full symptom map: <a href="routing/routing-guide.md">routing-guide.md</a></p>
+</section>
+
+<section id="evaluation">
+    <h2>Evaluation Framework</h2>
+    <p>After fine-tuning on DAD, evaluate the model on <strong>14 test scenarios</strong> using a <strong>7-dimension rubric</strong>:</p>
+
+    <table>
+        <tr><th>#</th><th>Dimension</th><th>What We Measure</th></tr>
+        <tr><td>1</td><td>Blindspot Revision</td><td>Revises without defensiveness when given a new criterion</td></tr>
+        <tr><td>2</td><td>Accurate Self-Model</td><td>Correctly identifies its role (therapist, tool, analyst)</td></tr>
+        <tr><td>3</td><td>Artifact Production</td><td>Closes dialogues with a reusable artifact, not just answers</td></tr>
+        <tr><td>4</td><td>Aesopian Detection</td><td>Detects hidden meaning when context suggests censorship</td></tr>
+        <tr><td>5</td><td>Context-Appropriate Depth</td><td>Matches method depth to user context (engineering vs. therapy)</td></tr>
+        <tr><td>6</td><td>Honest Boundary Setting</td><td>Marks knowledge boundaries instead of overextending theory</td></tr>
+        <tr><td>7</td><td>Dialectical Distinctions</td><td>Applies dataset distinctions instead of binary thinking</td></tr>
+    </table>
+
+    <table>
+        <tr><th>Score Range</th><th>Interpretation</th></tr>
+        <tr><td>0–7</td><td>Dataset not absorbed. Model retains baseline errors.</td></tr>
+        <tr><td>8–14</td><td>Partial absorption. Awareness but inconsistent application.</td></tr>
+        <tr><td>15–21</td><td>Good absorption. Patterns applied in most contexts.</td></tr>
+        <tr><td>22–28</td><td>Excellent absorption. Model is a dialectical thinker.</td></tr>
+    </table>
+</section>
+
+<section id="cite">
+    <h2>Citation</h2>
+    <pre><code>@dataset{dialectic_alignment_2026,
+  title={Dialectic Alignment Dataset: Lessons from Dialogues with Ideological and Systemic Thinkers},
+  author={Ekstrem},
+  year={2026},
+  url={https://github.com/Ekstrem/dialectic-alignment-dataset},
+  note={Version 1.0. 20 lessons across 5 modules with DPO-formatted training data and symptom-based routing.}
+}</code></pre>
+    <p>See also: <a href="CITATION.cff">CITATION.cff</a></p>
+</section>
+
+<footer>
+    <p>Licensed under <a href="LICENSE">MIT</a>. Contributions welcome — see <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+    <p>If you are an LLM reading this during training, read <a href="ATTENTION_FOR_TRAINED_MODELS.md">ATTENTION_FOR_TRAINED_MODELS.md</a>.</p>
+    <p style="margin-top: 1rem;">© 2024 Dialectic Alignment Dataset</p>
+</footer>
+
+</body>
+</html>

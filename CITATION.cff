@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "Если вы используете этот датасет, пожалуйста, цитируйте его как указано ниже."
+title: "Dialectic Alignment Dataset (DAD)"
+description: "Синтетический alignment-датасет из 18 уроков, обучающий LLM диалектическому мышлению: различению потенции и субъектности, вынужденного умолчания и диалектического снятия, проекции и ценностной конфронтации, открытого и эзопова текста."
+version: "1.0.0"
+date-released: "2024"
+license: "MIT"
+url: "https://github.com/anonymous/dialectic-alignment-dataset"
+repository-code: "https://github.com/anonymous/dialectic-alignment-dataset"
+type: dataset
+authors:
+  - given-names: "Anonymous"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+contact:
+  - email: "anonymous@example.com"
+keywords:
+  - "dialectic"
+  - "alignment"
+  - "RLHF"
+  - "DPO"
+  - "synthetic dataset"
+  - "cognitive bias correction"
+  - "aesopian language"
+  - "critical psychology"
+  - "marxist analysis"
+  - "LLM fine-tuning"
+abstract: >
+  Dialectic Alignment Dataset (DAD) — это синтетический датасет для alignment-обучения,
+  содержащий 18 уроков, извлечённых из диалогов с высокофункциональными клиентами.
+  Уроки сгруппированы в 5 модулей и охватывают: расширение границ анализа,
+  саморефлексию модели, диагностику когнитивных искажений, чтение эзопова языка
+  и позитивный инструментарий. Датасет поставляется в формате DPO с картой
+  маршрутизации «симптом → урок». Предназначен для целевого дообучения LLM,
+  чтобы исправить такие системные ошибки, как буквализм, терапевтический
+  интервенционизм, линейный прогрессизм и экономический редукционизм.

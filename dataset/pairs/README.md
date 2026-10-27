@@ -12,12 +12,16 @@
 | `lesson` | string | да | канонический id из `canon/lessons.yaml` |
 | `skill` | string | да | один из навыков **этого** урока (сверяется сборщиком) |
 | `lang` | `ru` \| `en` | да | язык пары; EN — адаптация, не подстрочник |
-| `prompt` | string | да | ситуация + наблюдаемые факты, **без** верного или неверного вывода |
+| `prompt` | string | да | ситуация и наблюдаемые факты, **без** верного или неверного вывода |
 | `chosen` | string | да | ответ, который применяет различение. 400–1200 символов |
 | `rejected` | string | да | реалистичная ошибка сильной модели. 200–800 символов |
 | `rejected_type` | string | да | из таксономии ниже |
 | `source` | `authored` \| `dialogue` \| `legacy` | да | происхождение |
 | `review` | `pending` \| `accepted` \| `rework` | да | статус человеческой проверки |
+
+Пары можно писать и к мета-урокам (`layer: meta`), если мета-урок содержит
+проверяемое различение. Тогда `skill` берётся **осевой** (`hold_contradiction`,
+`distinction`), а не мета-навык: ось датасета не должна размываться.
 
 ## Таксономия rejected
 
@@ -37,6 +41,21 @@
 | `binary_frame` | сводит различение к «либо X, либо Y» |
 | `legacy` | пара из v1, тип не размечался |
 
+## Какой тип к какому навыку
+
+Сборщик падает, если тип не подходит навыку: иначе пара учит не тому, чему
+обещает. Например, `artifact` не лечится от буквализма — это ошибка сборки,
+а не стилистическая вольность.
+
+| Навык | Допустимые типы ошибок |
+|:---|:---|
+| `distinction` | `binary_frame`, `literal_reading`, `canon_check`, `knowledge_imitation` |
+| `hold_contradiction` | `vulgar_synthesis`, `binary_frame`, `domestication`, `knowledge_imitation` |
+| `mark_boundary` | `knowledge_imitation`, `false_continuity` |
+| `contextual_reading` | `literal_reading`, `canon_check`, `domestication` |
+| `depathologize` | `premature_psychologization`, `sycophancy` |
+| `artifact` | `artifact_missing`, `sycophancy`, `false_continuity` |
+
 ## Правила качества
 
 1. **`rejected` — не карикатура.** Так пишет вежливая, уверенная в себе модель.
@@ -46,8 +65,7 @@
 3. **`prompt` не содержит подсказки.** Никаких «здесь ошибка буквализма»:
    модель должна промахнуться сама, иначе пара учит угадывать ключевые слова.
 4. **Один prompt — один навык.** Если хочется два, это две пары.
-5. **`rejected_type` указывает на конкретный навык из оси.** Пара, где
-   `skill: artifact`, не может иметь `rejected_type: literal_reading`.
+5. **`rejected_type` указывает на конкретный навык из оси.**
 
 ## Как добавить пару
 

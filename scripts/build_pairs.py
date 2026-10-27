@@ -35,7 +35,7 @@ REVIEW = {"pending", "accepted", "rework"}
 
 # Which error types may legitimately be paired with which skill.
 ALLOWED = {
-    "distinction": {"binary_frame", "literal_reading", "canon_check"},
+    "distinction": {"binary_frame", "literal_reading", "canon_check", "knowledge_imitation"},
     "hold_contradiction": {"vulgar_synthesis", "binary_frame", "domestication", "knowledge_imitation"},
     "mark_boundary": {"knowledge_imitation", "false_continuity"},
     "contextual_reading": {"literal_reading", "canon_check", "domestication"},

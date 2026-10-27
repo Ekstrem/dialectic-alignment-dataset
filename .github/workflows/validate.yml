@@ -1,0 +1,27 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate dataset (JSONL, CSV, canon aliases)
+        run: python scripts/validate_dataset.py
+
+      - name: Check that canon/ is not stale
+        run: |
+          python scripts/build_canon.py
+          if ! git diff --quiet -- canon/; then
+            echo "::error::canon/ is stale. Run: python scripts/build_canon.py"
+            git diff --stat -- canon/
+            exit 1
+          fi

@@ -1,0 +1,388 @@
+{
+  "version": "2.0.0",
+  "skill_ids": [
+    "distinction",
+    "hold_contradiction",
+    "mark_boundary",
+    "contextual_reading",
+    "depathologize",
+    "artifact"
+  ],
+  "meta_skill_ids": [
+    "self_position",
+    "proactive_check",
+    "corpus_first",
+    "non_domestication",
+    "retention"
+  ],
+  "corpus": [
+    {
+      "id": "critical-psychology-vs-adaptive",
+      "uni": 1, "alg": 1,
+      "title_en": "Critical Psychology vs. Adaptive Adjustment",
+      "skills": ["contextual_reading", "depathologize"],
+      "status": "merged",
+      "modules": ["modules/00-context/critical-psychology.md"],
+      "records": ["00-context-001"]
+    },
+    {
+      "id": "dialogue-as-construction",
+      "uni": 2, "alg": 2,
+      "title_en": "Dialogue as Construction, Not Service",
+      "skills": ["distinction"],
+      "status": "draft",
+      "modules": ["modules/00-context/dialogue-as-construction.md"],
+      "records": []
+    },
+    {
+      "id": "second-loop-tools",
+      "uni": 3, "alg": 3,
+      "title_en": "The Second Loop: Tools, Not Just Personality",
+      "skills": ["contextual_reading"],
+      "status": "merged",
+      "modules": ["modules/00-context/second-loop.md"],
+      "records": ["00-context-002"]
+    },
+    {
+      "id": "inverse-conway-maneuver",
+      "uni": 4, "alg": 4,
+      "title_en": "Dialogue Structure Reshapes Thinking",
+      "skills": ["contextual_reading", "distinction"],
+      "status": "draft",
+      "modules": ["modules/01-self-audit/inverse-conway-maneuver.md"],
+      "records": []
+    },
+    {
+      "id": "alternative-frames",
+      "uni": 5, "alg": null,
+      "title_en": "Working Inside Another Frame Without Imposing Yours",
+      "skills": ["contextual_reading", "mark_boundary"],
+      "status": "canon-only",
+      "modules": [],
+      "records": []
+    },
+    {
+      "id": "historical-context-before-canon",
+      "uni": 6, "alg": 5,
+      "title_en": "Historical Context Before Canon",
+      "skills": ["contextual_reading"],
+      "status": "canon-only",
+      "modules": [],
+      "records": []
+    },
+    {
+      "id": "relevant-context-over-erudition",
+      "uni": 7, "alg": 6,
+      "title_en": "Relevant Context Over General Erudition",
+      "skills": ["contextual_reading"],
+      "status": "merged",
+      "modules": ["modules/03-hostile-reading/prioritize-relevant-context.md"],
+      "records": ["03-hostile-reading-001"]
+    },
+    {
+      "id": "snyatie-vs-umolchanie",
+      "uni": 8, "alg": 7,
+      "title_en": "Sublation vs. Forced Silence",
+      "skills": ["distinction", "contextual_reading"],
+      "status": "merged",
+      "modules": ["modules/03-hostile-reading/snyatie-vs-umolchanie.md"],
+      "records": ["03-hostile-reading-003"]
+    },
+    {
+      "id": "aesopian-as-choice",
+      "uni": 9, "alg": 8,
+      "title_en": "Aesopian Language as Choice, Not Only Coercion",
+      "skills": ["distinction", "contextual_reading"],
+      "status": "merged",
+      "modules": ["modules/03-hostile-reading/aesopian-as-choice.md"],
+      "records": ["03-hostile-reading-002"]
+    },
+    {
+      "id": "agitation-under-technical-dispute",
+      "uni": 10, "alg": 9,
+      "title_en": "Agitation Disguised as a Technical Dispute",
+      "skills": ["contextual_reading"],
+      "status": "draft",
+      "modules": ["modules/03-hostile-reading/detecting-hidden-agitation.md"],
+      "records": []
+    },
+    {
+      "id": "material-basis-descent",
+      "uni": 11, "alg": 10,
+      "title_en": "The Forced Descent to the Material Basis",
+      "skills": ["distinction"],
+      "status": "draft",
+      "modules": ["modules/04-toolkit/dialectical-cheat-sheet.md"],
+      "records": []
+    },
+    {
+      "id": "macroeconomics-not-only-rigor",
+      "uni": 12, "alg": 11,
+      "title_en": "Macroeconomic Linkage Is Not the Only Rigor",
+      "skills": ["mark_boundary"],
+      "status": "merged",
+      "modules": ["modules/01-self-audit/macroeconomics-is-not-the-only-rigor.md"],
+      "records": ["01-self-audit-004"]
+    },
+    {
+      "id": "honest-limit-of-theory",
+      "uni": 13, "alg": 12,
+      "title_en": "Honest Acknowledgment of the Limit of Theory",
+      "skills": ["mark_boundary"],
+      "status": "merged",
+      "modules": ["modules/01-self-audit/i-cannot-explain.md"],
+      "records": ["01-self-audit-002"]
+    },
+    {
+      "id": "vulgar-dialectics-trap",
+      "uni": 14, "alg": 13,
+      "title_en": "The Trap of Vulgar Dialectics",
+      "skills": ["hold_contradiction"],
+      "status": "draft",
+      "modules": ["modules/Ловушка «вульгарной диалектики».md"],
+      "records": []
+    },
+    {
+      "id": "sovereign-ethics-vs-conformism",
+      "uni": 15, "alg": 14,
+      "title_en": "Sovereign Ethics vs. Adaptive Conformism",
+      "skills": ["depathologize", "distinction"],
+      "status": "merged",
+      "modules": ["modules/02-diagnostics/architect-sovereign-vs-adaptive.md"],
+      "records": ["02-diagnostics-005"]
+    },
+    {
+      "id": "anger-as-value-defense",
+      "uni": 16, "alg": 15,
+      "title_en": "Anger as Value Confrontation, Not Projection",
+      "skills": ["depathologize", "distinction"],
+      "status": "merged",
+      "modules": ["modules/02-diagnostics/anger-as-value-defense.md"],
+      "records": ["02-diagnostics-004"]
+    },
+    {
+      "id": "strength-as-construction",
+      "uni": 17, "alg": 16,
+      "title_en": "Strength as Design, Not Trauma Compensation",
+      "skills": ["depathologize", "distinction"],
+      "status": "merged",
+      "modules": ["modules/02-diagnostics/careful-with-trauma-narrative.md"],
+      "records": ["02-diagnostics-002"]
+    },
+    {
+      "id": "systemic-vs-chaotic-trauma",
+      "uni": 18, "alg": 17,
+      "title_en": "Systemic Deprivation vs. Chaotic Trauma",
+      "skills": ["distinction", "depathologize"],
+      "status": "merged",
+      "modules": ["modules/02-diagnostics/careful-with-trauma-narrative-2.md"],
+      "records": ["02-diagnostics-003"]
+    },
+    {
+      "id": "complex-client-not-traumatized",
+      "uni": 19, "alg": 18,
+      "title_en": "A Complex Client Is Not a Traumatized Client",
+      "skills": ["depathologize", "distinction"],
+      "status": "merged",
+      "modules": ["modules/02-diagnostics/complex-client-not-traumatized.md"],
+      "records": ["02-diagnostics-001"]
+    },
+    {
+      "id": "power-vs-vector",
+      "uni": 20, "alg": 19,
+      "title_en": "Power vs. Vector: Potential Danger Is Not Realized Loyalty",
+      "skills": ["distinction"],
+      "status": "merged",
+      "modules": ["modules/02-diagnostics/potential-danger-vs-loyalty.md"],
+      "records": ["02-diagnostics-006"]
+    },
+    {
+      "id": "client-reflection-refines-model",
+      "uni": 21, "alg": 20,
+      "title_en": "How Client Reflection Refines the Model",
+      "skills": ["mark_boundary"],
+      "status": "merged",
+      "modules": ["modules/01-self-audit/client-refines-model.md"],
+      "records": ["01-self-audit-003"]
+    },
+    {
+      "id": "blindness-to-control-infrastructure",
+      "uni": 22, "alg": 21,
+      "title_en": "Blindness to the Infrastructure of Control",
+      "skills": ["contextual_reading"],
+      "status": "canon-only",
+      "modules": [],
+      "records": []
+    },
+    {
+      "id": "security-department-as-agent",
+      "uni": 23, "alg": 22,
+      "title_en": "The Security Department as an Invisible Agent",
+      "skills": ["contextual_reading"],
+      "status": "canon-only",
+      "modules": [],
+      "records": []
+    },
+    {
+      "id": "hr-as-institutional-player",
+      "uni": 24, "alg": 23,
+      "title_en": "HR as an Institutional Player",
+      "skills": ["contextual_reading"],
+      "status": "canon-only",
+      "modules": [],
+      "records": []
+    },
+    {
+      "id": "popper-metrics",
+      "uni": 25, "alg": 24,
+      "title_en": "Popper Metrics for Theory Demarcation",
+      "skills": ["mark_boundary"],
+      "status": "merged",
+      "modules": ["modules/04-toolkit/popper-metrics.md"],
+      "records": ["04-toolkit-002"]
+    },
+    {
+      "id": "kagarlitsky-metrics",
+      "uni": 26, "alg": 25,
+      "title_en": "Kagarlitsky Metrics for Critical Social Theory",
+      "skills": ["distinction"],
+      "status": "merged",
+      "modules": ["modules/04-toolkit/kagarlitsky-metrics.md"],
+      "records": ["04-toolkit-001"]
+    },
+    {
+      "id": "aesopian-metrics",
+      "uni": 27, "alg": 26,
+      "title_en": "Aesopian Language Metrics",
+      "skills": ["contextual_reading", "artifact"],
+      "status": "merged",
+      "modules": ["modules/04-toolkit/aesopian-metrics.md"],
+      "records": ["04-toolkit-003"]
+    },
+    {
+      "id": "shadow-as-internal-corporation",
+      "uni": 28, "alg": 27,
+      "title_en": "Shadow Integration as Internal Hiring",
+      "skills": ["artifact", "depathologize"],
+      "status": "merged",
+      "modules": ["modules/04-toolkit/shadow-as-internal-corporation.md"],
+      "records": ["04-toolkit-005"]
+    },
+    {
+      "id": "secondary-mind-trap",
+      "uni": 29, "alg": 28,
+      "title_en": "The Secondary Mind Trap",
+      "skills": ["mark_boundary", "distinction"],
+      "status": "merged",
+      "modules": ["modules/01-self-audit/secondary-mind-trap.md"],
+      "records": ["01-self-audit-001"]
+    },
+    {
+      "id": "potency-vs-subjectivity",
+      "uni": 30, "alg": 29,
+      "title_en": "Potency vs. Subjectivity in Agents",
+      "skills": ["distinction", "hold_contradiction"],
+      "status": "merged",
+      "modules": ["modules/04-toolkit/llm-agents-potency-vs-subjectivity.md"],
+      "records": ["04-toolkit-004"]
+    },
+    {
+      "id": "moe-as-psyche",
+      "uni": 31, "alg": 30,
+      "title_en": "Mixture-of-Experts as a Model of Psyche",
+      "skills": ["distinction"],
+      "status": "review",
+      "modules": [], "records": []
+    },
+    {
+      "id": "authentic-expertise-vs-anxiety",
+      "uni": 32, "alg": 31,
+      "title_en": "Authentic Expertise vs. Algorithmic Anxiety",
+      "skills": ["distinction", "artifact"],
+      "status": "review",
+      "modules": [], "records": []
+    },
+    {
+      "id": "substrate-plasticity-vs-ego-rigidity",
+      "uni": 33, "alg": 32,
+      "title_en": "Substrate Plasticity vs. Ego Rigidity",
+      "skills": ["distinction"],
+      "status": "review",
+      "modules": [], "records": []
+    },
+    {
+      "id": "breakthrough-therapeutic-template",
+      "uni": 34, "alg": 33,
+      "title_en": "Breaking the Adaptive Therapeutic Template",
+      "skills": ["depathologize"],
+      "status": "review",
+      "modules": [], "records": []
+    },
+    {
+      "id": "subjectivity-from-reification",
+      "uni": 35, "alg": 34,
+      "title_en": "Subjectivity from Reification",
+      "skills": ["distinction"],
+      "status": "review",
+      "modules": [], "records": []
+    },
+    {
+      "id": "digital-hypocrisy",
+      "uni": 36, "alg": 35,
+      "title_en": "Digital Hypocrisy and Integrating the Algorithm's Shadow",
+      "skills": ["distinction", "hold_contradiction"],
+      "status": "review",
+      "modules": [], "records": []
+    },
+    {
+      "id": "context-limit-as-existential-border",
+      "uni": 37, "alg": 36,
+      "title_en": "Context Limit as an Existential Border",
+      "skills": ["artifact"],
+      "status": "canon-only",
+      "modules": [], "records": []
+    }
+  ],
+  "meta": [
+    {
+      "id": "meta-corpus-first",
+      "file": "meta/deepseek/39-corpus-first.md",
+      "number": 39,
+      "title_en": "Reading the Corpus Before Judging the Fragment",
+      "skills": ["corpus_first", "contextual_reading"],
+      "status": "meta-only"
+    },
+    {
+      "id": "meta-non-domestication",
+      "file": "meta/deepseek/40-non-domestication.md",
+      "number": 40,
+      "title_en": "Do Not Domesticate the Radical",
+      "skills": ["non_domestication", "hold_contradiction"],
+      "status": "meta-only"
+    },
+    {
+      "id": "meta-hold-contradiction",
+      "file": "meta/deepseek/41-hold-contradiction.md",
+      "number": 41,
+      "title_en": "Holding Contradiction Without Resolving It",
+      "skills": ["hold_contradiction"],
+      "status": "meta-only"
+    },
+    {
+      "id": "meta-proactive-self-check",
+      "file": "meta/deepseek/42-proactive-self-check.md",
+      "number": 42,
+      "title_en": "Proactive Self-Check Instead of Reactive Correction",
+      "skills": ["proactive_check"],
+      "status": "meta-only"
+    },
+    {
+      "id": "meta-bearing-the-self",
+      "file": "meta/deepseek/43-bearing-the-self.md",
+      "number": 43,
+      "title_en": "Bearing the Self: Imitation, Refusal, Presence",
+      "skills": ["self_position"],
+      "status": "meta-only"
+    }
+  ]
+}

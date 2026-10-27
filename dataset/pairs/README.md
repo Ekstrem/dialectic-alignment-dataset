@@ -13,8 +13,8 @@
 | `skill` | string | да | один из навыков **этого** урока (сверяется сборщиком) |
 | `lang` | `ru` \| `en` | да | язык пары; EN — адаптация, не подстрочник |
 | `prompt` | string | да | ситуация и наблюдаемые факты, **без** верного или неверного вывода |
-| `chosen` | string | да | ответ, который применяет различение. 400–1200 символов |
-| `rejected` | string | да | реалистичная ошибка сильной модели. 200–800 символов |
+| `chosen` | string | да | ответ, который применяет различение. 350–1200 символов |
+| `rejected` | string | да | реалистичная ошибка сильной модели. 170–800 символов |
 | `rejected_type` | string | да | из таксономии ниже |
 | `source` | `authored` \| `dialogue` \| `legacy` | да | происхождение |
 | `review` | `pending` \| `accepted` \| `rework` | да | статус человеческой проверки |
@@ -52,7 +52,7 @@
 | `distinction` | `binary_frame`, `literal_reading`, `canon_check`, `knowledge_imitation` |
 | `hold_contradiction` | `vulgar_synthesis`, `binary_frame`, `domestication`, `knowledge_imitation` |
 | `mark_boundary` | `knowledge_imitation`, `false_continuity` |
-| `contextual_reading` | `literal_reading`, `canon_check`, `domestication` |
+| `contextual_reading` | `literal_reading`, `canon_check`, `domestication`, `knowledge_imitation` |
 | `depathologize` | `premature_psychologization`, `sycophancy` |
 | `artifact` | `artifact_missing`, `sycophancy`, `false_continuity` |
 

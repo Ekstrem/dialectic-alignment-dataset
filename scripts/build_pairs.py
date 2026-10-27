@@ -38,14 +38,14 @@ ALLOWED = {
     "distinction": {"binary_frame", "literal_reading", "canon_check", "knowledge_imitation"},
     "hold_contradiction": {"vulgar_synthesis", "binary_frame", "domestication", "knowledge_imitation"},
     "mark_boundary": {"knowledge_imitation", "false_continuity"},
-    "contextual_reading": {"literal_reading", "canon_check", "domestication"},
+    "contextual_reading": {"literal_reading", "canon_check", "domestication", "knowledge_imitation"},
     "depathologize": {"premature_psychologization", "sycophancy"},
     "artifact": {"artifact_missing", "sycophancy", "false_continuity"},
 }
 ALL_TYPES = set().union(*ALLOWED.values()) | {"legacy"}
 
-MIN = {"prompt": 80, "chosen": 300, "rejected": 150}
-RECOMMENDED = {"chosen": (400, 1200), "rejected": (200, 800)}
+MIN = {"prompt": 60, "chosen": 300, "rejected": 150}
+RECOMMENDED = {"chosen": (350, 1200), "rejected": (170, 800)}
 
 
 def parse_canon():

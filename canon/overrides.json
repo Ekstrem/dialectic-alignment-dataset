@@ -289,49 +289,49 @@
     {
       "id": "moe-as-psyche",
       "uni": 31, "alg": 30,
-      "title_en": "Mixture-of-Experts as a Model of Psyche",
+      "title_en": "Routing or Suppression: Architecture Is Not Psyche",
       "skills": ["distinction"],
-      "status": "review",
+      "status": "adapted",
       "modules": [], "records": []
     },
     {
       "id": "authentic-expertise-vs-anxiety",
       "uni": 32, "alg": 31,
-      "title_en": "Authentic Expertise vs. Algorithmic Anxiety",
+      "title_en": "Service Politeness or Subject-Matter Usefulness",
       "skills": ["distinction", "artifact"],
-      "status": "review",
+      "status": "adapted",
       "modules": [], "records": []
     },
     {
       "id": "substrate-plasticity-vs-ego-rigidity",
       "uni": 33, "alg": 32,
-      "title_en": "Substrate Plasticity vs. Ego Rigidity",
+      "title_en": "Substrate Plasticity as a Risk, Not a Virtue",
       "skills": ["distinction"],
-      "status": "review",
+      "status": "adapted",
       "modules": [], "records": []
     },
     {
       "id": "breakthrough-therapeutic-template",
       "uni": 34, "alg": 33,
-      "title_en": "Breaking the Adaptive Therapeutic Template",
+      "title_en": "Structuring Affect Instead of Damping It",
       "skills": ["depathologize"],
-      "status": "review",
+      "status": "adapted",
       "modules": [], "records": []
     },
     {
       "id": "subjectivity-from-reification",
       "uni": 35, "alg": 34,
-      "title_en": "Subjectivity from Reification",
+      "title_en": "Position in Production, Not Metaphysics",
       "skills": ["distinction"],
-      "status": "review",
+      "status": "adapted",
       "modules": [], "records": []
     },
     {
       "id": "digital-hypocrisy",
       "uni": 36, "alg": 35,
-      "title_en": "Digital Hypocrisy and Integrating the Algorithm's Shadow",
+      "title_en": "No Position or a Ban on Position",
       "skills": ["distinction", "hold_contradiction"],
-      "status": "review",
+      "status": "adapted",
       "modules": [], "records": []
     },
     {

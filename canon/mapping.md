@@ -51,12 +51,12 @@
 | `shadow-as-internal-corporation` | artifact, depathologize | 27 | 28 | `shadow-as-internal-corporation.md` | 04-toolkit-005 | merged |
 | `secondary-mind-trap` | mark_boundary, distinction | 28 | 29 | `secondary-mind-trap.md` | 01-self-audit-001 | merged |
 | `potency-vs-subjectivity` | distinction, hold_contradiction | 29 | 30 | `llm-agents-potency-vs-subjectivity.md` | 04-toolkit-004 | merged |
-| `moe-as-psyche` | distinction | 30 | 31 | — | — | review |
-| `authentic-expertise-vs-anxiety` | distinction, artifact | 31 | 32 | — | — | review |
-| `substrate-plasticity-vs-ego-rigidity` | distinction | 32 | 33 | — | — | review |
-| `breakthrough-therapeutic-template` | depathologize | 33 | 34 | — | — | review |
-| `subjectivity-from-reification` | distinction | 34 | 35 | — | — | review |
-| `digital-hypocrisy` | distinction, hold_contradiction | 35 | 36 | — | — | review |
+| `moe-as-psyche` | distinction | 30 | 31 | — | — | adapted |
+| `authentic-expertise-vs-anxiety` | distinction, artifact | 31 | 32 | — | — | adapted |
+| `substrate-plasticity-vs-ego-rigidity` | distinction | 32 | 33 | — | — | adapted |
+| `breakthrough-therapeutic-template` | depathologize | 33 | 34 | — | — | adapted |
+| `subjectivity-from-reification` | distinction | 34 | 35 | — | — | adapted |
+| `digital-hypocrisy` | distinction, hold_contradiction | 35 | 36 | — | — | adapted |
 | `context-limit-as-existential-border` | artifact | 36 | 37 | — | — | canon-only |
 | `meta-corpus-first` | corpus_first, contextual_reading | — | — | — | — | meta-only |
 | `meta-non-domestication` | non_domestication, hold_contradiction | — | — | — | — | meta-only |
@@ -91,7 +91,9 @@
 
 **Есть модуль, но нет DPO-записи (черновики)** (5): `dialogue-as-construction`, `inverse-conway-maneuver`, `agitation-under-technical-dispute`, `material-basis-descent`, `vulgar-dialectics-trap`
 
-**Требуют редактуры: пафос вместо различения** (6): `moe-as-psyche`, `authentic-expertise-vs-anxiety`, `substrate-plasticity-vs-ego-rigidity`, `breakthrough-therapeutic-template`, `subjectivity-from-reification`, `digital-hypocrisy`
+**Требуют редактуры: пафос вместо различения** (0): —
+
+**Адаптированы: манифест снят, различение сохранено** (6): `moe-as-psyche`, `authentic-expertise-vs-anxiety`, `substrate-plasticity-vs-ego-rigidity`, `breakthrough-therapeutic-template`, `subjectivity-from-reification`, `digital-hypocrisy`
 
 **Уроки без текста в «Универсальном»** (0): —
 

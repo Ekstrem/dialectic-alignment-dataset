@@ -58,6 +58,9 @@ FIELD_KEYS = {
     "Что это значит на практике": "practice",
     "Почему это ценно": "why",
     "Чему я хочу научиться": "learning",
+    "Заголовок": "title",
+    "Различение": "distinction",
+    "Антипаттерн": "antipattern",
 }
 
 ORDER = [
@@ -128,6 +131,31 @@ def parse_lessons(path):
     return out
 
 
+def parse_card(path):
+    """Parse an adapted single-lesson card into {field_key: text}."""
+    fields, cur, buf = {}, None, []
+
+    def flush():
+        nonlocal cur, buf
+        if cur and buf:
+            fields[cur] = "\n".join(buf).strip()
+        cur, buf = None, []
+
+    for raw in open(path, encoding="utf-8"):
+        line = raw.rstrip("\n")
+        m = FIELD_RE.match(line)
+        if m:
+            flush()
+            label = m.group(1).strip()
+            cur = FIELD_KEYS.get(label, label)
+            buf = [m.group(2)] if m.group(2) else []
+            continue
+        if cur is not None:
+            buf.append(line)
+    flush()
+    return fields
+
+
 def yq(s):
     return json.dumps(s, ensure_ascii=False)
 
@@ -169,6 +197,11 @@ def main():
         if not src:
             problems.append("%s: нет текста ни в universal, ни в algorithms" % lid)
             continue
+        adapted_file = os.path.join(SRC, "adapted", lid + ".md")
+        if os.path.exists(adapted_file):
+            card = parse_card(adapted_file)
+            title = card.pop("title", None) or src["title"]
+            src = {"title": title, "fields": card, "extra": []}
         fields = dict(src["fields"])
         skills = entry["skills"]
         bad = [s for s in skills if s not in ov["skill_ids"] and s not in ov["meta_skill_ids"]]
@@ -321,6 +354,7 @@ def main():
     canon_only = [L["id"] for L in lessons if L["status"] == "canon-only"]
     drafts = [L["id"] for L in lessons if L["status"] == "draft"]
     review = [L["id"] for L in lessons if L["status"] == "review"]
+    adapted = [L["id"] for L in lessons if L["status"] == "adapted"]
     no_uni = [L["id"] for L in lessons if L["layer"] == "corpus" and L["uni"] is None]
     md.append("**Есть в каноне, нет ни модуля, ни DPO-записи** (%d): %s\n" % (
         len(canon_only), ", ".join("`%s`" % x for x in canon_only) or "—"))
@@ -328,6 +362,8 @@ def main():
         len(drafts), ", ".join("`%s`" % x for x in drafts) or "—"))
     md.append("**Требуют редактуры: пафос вместо различения** (%d): %s\n" % (
         len(review), ", ".join("`%s`" % x for x in review) or "—"))
+    md.append("**Адаптированы: манифест снят, различение сохранено** (%d): %s\n" % (
+        len(adapted), ", ".join("`%s`" % x for x in adapted) or "—"))
     md.append("**Уроки без текста в «Универсальном»** (%d): %s\n" % (
         len(no_uni), ", ".join("`%s`" % x for x in no_uni) or "—"))
     md.append("### Мета-уроки из Obsidian (39–43)\n")

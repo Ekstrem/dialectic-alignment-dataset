@@ -25,3 +25,11 @@ jobs:
             git diff --stat -- canon/
             exit 1
           fi
+
+      - name: Build and validate v2 pairs
+        run: |
+          python scripts/build_pairs.py
+          if ! git diff --quiet -- dataset/dialectic_alignment_v2.jsonl; then
+            echo "::error::dataset/dialectic_alignment_v2.jsonl is stale. Run: python scripts/build_pairs.py"
+            exit 1
+          fi

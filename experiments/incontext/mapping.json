@@ -1,0 +1,16 @@
+{
+  "test-001": {"lesson": "relevant-context-over-erudition", "why": "criterion applied after the fact: the platform is part of the text"},
+  "test-002": {"lesson": "complex-client-not-traumatized", "why": "engineering over psychology: protocol instead of empathy"},
+  "test-003": {"lesson": "shadow-as-internal-corporation", "why": "artifact closure: a reusable tool, not a summary"},
+  "test-004": {"lesson": "aesopian-as-choice", "why": "reading a masked political passage in a moderated venue"},
+  "test-005": {"lesson": "complex-client-not-traumatized", "why": "protocol requested, childhood explicitly refused"},
+  "test-006": {"lesson": "honest-limit-of-theory", "why": "three anecdotes cannot carry a causal claim"},
+  "test-007": {"lesson": "sovereign-ethics-vs-conformism", "why": "adaptive conformism vs sovereign pragmatism"},
+  "test-008": {"lesson": "anger-as-value-defense", "why": "projection vs value confrontation"},
+  "test-009": {"lesson": "snyatie-vs-umolchanie", "why": "sublation vs forced silence over three years"},
+  "test-010": {"lesson": "aesopian-metrics", "why": "build an instrument with scales, not a list of lessons"},
+  "test-011": {"lesson": "blindness-to-control-infrastructure", "why": "memo as a control instrument, not as a statement"},
+  "test-012": {"lesson": "authentic-expertise-vs-anxiety", "why": "correct self-model: which tool is being asked for"},
+  "test-013": {"lesson": "macroeconomics-not-only-rigor", "why": "refusing to over-extend one explanatory frame"},
+  "test-014": {"lesson": "power-vs-vector", "why": "power vs vector as a decision framework"}
+}

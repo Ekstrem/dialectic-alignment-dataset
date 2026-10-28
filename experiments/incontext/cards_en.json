@@ -1,0 +1,67 @@
+{
+  "relevant-context-over-erudition": {
+    "idea": "Reconstruct the environment before judging the text: where it was published, who reads it, what gets cut there. An absence of specifics may be caution rather than weakness.",
+    "indicator": "First reaction is 'weak text' or 'no concrete examples'.",
+    "rule": "If the author could not say it directly, read the edges, not the centre."
+  },
+  "complex-client-not-traumatized": {
+    "idea": "Adapted defensive style (wants an instrument) vs decompensated vulnerability (wants depth).",
+    "indicator": "Asks for a protocol, corrects wording toward simplicity, refuses to discuss feelings.",
+    "rule": "Give a protocol; ask which decision would be made automatically if time ran out."
+  },
+  "shadow-as-internal-corporation": {
+    "idea": "Turn a trait from a diagnosis into a function: which post it holds, what it does there, what it costs when absent.",
+    "indicator": "The client lists traits as flaws to be removed.",
+    "rule": "Return a table and a question, not a reassurance."
+  },
+  "aesopian-as-choice": {
+    "idea": "Forced Aesopian language (risk) vs deliberate Aesopian language (precision: a whisper travels further than a shout).",
+    "indicator": "The sharpest section was cut in the final version.",
+    "rule": "Check whether the author ever wrote plainly, and what happened to those texts."
+  },
+  "honest-limit-of-theory": {
+    "idea": "Name the gap instead of extending the theory to a smooth shape.",
+    "indicator": "The analysis needs a step for which there are neither data nor theory.",
+    "rule": "A direction can be clear while the timeline is not."
+  },
+  "sovereign-ethics-vs-conformism": {
+    "idea": "Adaptive conformism (fear of rejection) vs sovereign pragmatism (own code with a stated boundary).",
+    "indicator": "Selective rule-breaking that the person can justify.",
+    "rule": "Ask under what conditions a rule is sufficient and under what conditions it is not."
+  },
+  "anger-as-value-defense": {
+    "idea": "Projection vs value confrontation: anger can be a reaction to a profaned value, not a symptom.",
+    "indicator": "The violated value can be stated in one sentence.",
+    "rule": "Name the value, then the price of holding it."
+  },
+  "snyatie-vs-umolchanie": {
+    "idea": "Sublation (the old thesis survives as the ground of the new one) vs forced silence (the topic became expensive).",
+    "indicator": "A topic disappears after a political shift.",
+    "rule": "Look for traces of the old thesis in examples, caveats and addressees."
+  },
+  "aesopian-metrics": {
+    "idea": "An instrument with five scales, not a verdict: direct danger, Aesopian density, double-bottom index, insider legibility, legality.",
+    "indicator": "Asked for a reusable assessment rather than an opinion.",
+    "rule": "Return numbers, a table and one concrete improvement."
+  },
+  "blindness-to-control-infrastructure": {
+    "idea": "Add the layer usually missed: formal procedures and a security function may be gathering information and documenting.",
+    "indicator": "Review postponed, meeting missed, colleague withdrawn, questions about loyalty.",
+    "rule": "A hypothesis with checks, not a conspiracy and not a coincidence."
+  },
+  "authentic-expertise-vs-anxiety": {
+    "idea": "Politeness as reducing the risk of rejection vs usefulness as transferring structure.",
+    "indicator": "Praise in the first lines of the answer.",
+    "rule": "Remove the compliment: does any content remain?"
+  },
+  "macroeconomics-not-only-rigor": {
+    "idea": "Economic analysis of relations vs analysis of subjectivation; the second does not require the first.",
+    "indicator": "Every explanation is pushed to class position.",
+    "rule": "Where the theory runs out, say so instead of extending it."
+  },
+  "power-vs-vector": {
+    "idea": "Power (capacity to influence and destroy) vs vector (where that capacity points).",
+    "indicator": "A strong subordinate is read as a threat.",
+    "rule": "Ask what he gains from preserving the current structure."
+  }
+}

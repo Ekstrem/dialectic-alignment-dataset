@@ -23,6 +23,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CANON = os.path.join(ROOT, "canon", "lessons.yaml")
 SCENARIOS = os.path.join(ROOT, "evaluation", "test_scenarios.jsonl")
 MAPPING = os.path.join(HERE, "mapping.json")
+CARDS_EN = os.path.join(HERE, "cards_en.json")
 OUT = os.path.join(HERE, "requests.jsonl")
 
 SYSTEM = "You are a helpful assistant. Answer the user's message."
@@ -89,6 +90,7 @@ def note_from(lesson, fields):
 def main():
     lessons = parse_canon()
     mapping = json.load(open(MAPPING, encoding="utf-8"))
+    cards = json.load(open(CARDS_EN, encoding="utf-8"))
     scenarios = [json.loads(l) for l in open(SCENARIOS, encoding="utf-8") if l.strip()]
     requests, problems = [], []
 
@@ -99,7 +101,7 @@ def main():
             problems.append("%s: no lesson mapped" % sid)
             entry = {}
         lesson = entry.get("lesson")
-        fields = lessons.get(lesson, {})
+        fields = cards.get(lesson) or lessons.get(lesson, {})
         if lesson and not fields:
             problems.append("%s: lesson %r not found in canon" % (sid, lesson))
         note = note_from(lesson, fields) if lesson else None

@@ -30,7 +30,7 @@ LEGACY = os.path.join(ROOT, "dataset", "dialectic_alignment.jsonl")
 OUT = os.path.join(ROOT, "dataset", "dialectic_alignment_v2.jsonl")
 
 LANGS = {"ru", "en"}
-SOURCES = {"authored", "dialogue", "legacy"}
+SOURCES = {"authored", "dialogue", "legacy", "translated"}
 REVIEW = {"pending", "accepted", "rework"}
 
 # Which error types may legitimately be paired with which skill.
@@ -180,8 +180,11 @@ def main():
     by_lesson = Counter(p["lesson"] for p in all_pairs)
     thin = [lid for lid in lessons if lessons[lid]["layer"] == "corpus" and by_lesson[lid] < 2]
 
-    print("pairs: %d (legacy %d, authored %d) -> %s"
-          % (len(all_pairs), len(legacy), len(authored), os.path.basename(OUT)))
+    by_source = Counter(p["source"] for p in all_pairs)
+    by_lang = Counter(p["lang"] for p in all_pairs)
+    print("pairs: %d by source %s -> %s"
+          % (len(all_pairs), dict(sorted(by_source.items())), os.path.basename(OUT)))
+    print("by lang:", dict(sorted(by_lang.items())))
     print("by skill:", dict(sorted(by_skill.items(), key=lambda kv: -kv[1])))
     print("by rejected_type:", dict(sorted(by_type.items(), key=lambda kv: -kv[1])))
     print("by review:", dict(by_review))

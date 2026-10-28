@@ -16,7 +16,8 @@
 | `chosen` | string | да | ответ, который применяет различение. 350–1200 символов |
 | `rejected` | string | да | реалистичная ошибка сильной модели. 170–800 символов |
 | `rejected_type` | string | да | из таксономии ниже |
-| `source` | `authored` \| `dialogue` \| `legacy` | да | происхождение |
+| `source` | `authored` \| `dialogue` \| `legacy` \| `translated` | да | происхождение |
+| `translation_of` | string | нет | id пары-оригинала, если это перевод (`lang: en`) |
 | `review` | `pending` \| `accepted` \| `rework` | да | статус человеческой проверки |
 
 Пары можно писать и к мета-урокам (`layer: meta`), если мета-урок содержит
